@@ -59,6 +59,9 @@ const PROJECTS = [
   { name: 'KalyanHyper', desc: 'E-commerce platform, hypermarket retail.', link: 'https://kalyanhyper.com' },
   { name: 'PaulAlukkas', desc: 'E-commerce platform for a jewellery retailer.', link: 'https://alukkasjewellery.com' },
 ]
+const PROJECTSPERSONAL = [
+  { name: 'LotusFlix', desc: 'C-Drama Discovery & Watchlist Platform.', link: 'https://lotusflix.netlify.app/' },
+]
 
 function Eyebrow({ children }) {
   return (
@@ -197,10 +200,33 @@ export default function App() {
       <div className="max-w-3xl mx-auto border-t border-line" />
       <section className="px-6 py-24 md:py-32 max-w-3xl mx-auto">
         <Reveal>
-          <Eyebrow>Selected projects</Eyebrow>
+          <Eyebrow>Professional projects</Eyebrow>
         </Reveal>
         <div className="mt-10 divide-y divide-line border-y border-line">
           {PROJECTS.map((p, i) => (
+            <Reveal key={p.name} delay={i * 0.06}>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between py-6 hover:pl-2 transition-all duration-300"
+              >
+                <div>
+                  <h3 className="font-serif text-xl md:text-2xl group-hover:text-gold transition-colors">{p.name}</h3>
+                  <p className="text-muted text-sm mt-1">{p.desc}</p>
+                </div>
+                <ArrowUpRight className="text-muted group-hover:text-gold transition-colors shrink-0" size={22} />
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+        <section className="px-6 py-24 md:py-32 max-w-3xl mx-auto">
+        <Reveal>
+          <Eyebrow>Personal Projects </Eyebrow>
+        </Reveal>
+        <div className="mt-10 divide-y divide-line border-y border-line">
+          {PROJECTSPERSONAL.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.06}>
               <a
                 href={p.link}
