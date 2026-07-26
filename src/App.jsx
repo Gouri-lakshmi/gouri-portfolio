@@ -61,6 +61,7 @@ const PROJECTS = [
 ]
 const PROJECTSPERSONAL = [
   { name: 'LotusFlix', desc: 'C-Drama Discovery & Watchlist Platform.', link: 'https://lotusflix.netlify.app/' },
+{ name: 'NOELLE', desc: 'E-commerce platform for premium makeup and skincare.', link: 'https://lotusflix.netlify.app/' },
 ]
 
 function Eyebrow({ children }) {
